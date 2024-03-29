@@ -74,6 +74,11 @@ export interface Page {
         contentBackgroundColor?: ('white' | 'black') | null;
         layout?: ('oneColumn' | 'twoThirdsOneThird' | 'halfAndHalf' | 'threeColumns') | null;
         columnOne?: {
+          richText?:
+            | {
+                [k: string]: unknown;
+              }[]
+            | null;
           enableLink?: boolean | null;
           link?: {
             type?: ('reference' | 'custom') | null;
@@ -88,6 +93,11 @@ export interface Page {
           };
         };
         columnTwo?: {
+          richText?:
+            | {
+                [k: string]: unknown;
+              }[]
+            | null;
           enableLink?: boolean | null;
           link?: {
             type?: ('reference' | 'custom') | null;
@@ -102,6 +112,11 @@ export interface Page {
           };
         };
         columnThree?: {
+          richText?:
+            | {
+                [k: string]: unknown;
+              }[]
+            | null;
           enableLink?: boolean | null;
           link?: {
             type?: ('reference' | 'custom') | null;
@@ -123,6 +138,11 @@ export interface Page {
         mediaBlockBackgroundColor?: ('white' | 'black') | null;
         position?: ('default' | 'fullscreen') | null;
         media: string | Media;
+        caption?:
+          | {
+              [k: string]: unknown;
+            }[]
+          | null;
         id?: string | null;
         blockName?: string | null;
         blockType: 'mediaBlock';
@@ -147,6 +167,80 @@ export interface Media {
   filesize?: number | null;
   width?: number | null;
   height?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    square?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    squareSmall?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    card?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    cardVertical?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    desktop?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    desktopCropped?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    tablet?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    tabletCropped?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
 }
 export interface User {
   id: string;
