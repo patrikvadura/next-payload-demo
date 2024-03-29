@@ -6,12 +6,12 @@ import classes from './index.module.scss';
 
 export type Props = {
   label?: string
-  appearance?: 'default' | 'primary' | 'secondary'
-  el?: 'button' | 'link' | 'a'
+  appearance?: 'default' | 'primary' | 'secondary' | null
+  el?: any
   onClick?: () => void
-  href?: string
-  newTab?: boolean
-  className?: string
+  href?: string | null
+  newTab?: boolean | null
+  className?: string | null
 }
 
 export const Button: React.FC<Props> = ({

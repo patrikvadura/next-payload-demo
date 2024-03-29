@@ -4,15 +4,15 @@ import { Page } from '../../payload-types';
 import { Button } from '../Button';
 
 type CMSLinkType = {
-  type?: 'custom' | 'reference'
-  url?: string
-  newTab?: boolean
+  type?: ('reference' | 'custom') | null
+  newTab?: boolean | null
   reference?: {
-    value: string | Page
     relationTo: 'pages'
-  }
-  label?: string
-  appearance?: 'default' | 'primary' | 'secondary'
+    value: string | Page
+  } | null
+  url?: any
+  label: string
+  appearance?: ('default' | 'primary' | 'secondary') | null
   children?: React.ReactNode
   className?: string
 }

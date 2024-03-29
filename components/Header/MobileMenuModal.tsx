@@ -20,7 +20,7 @@ export const MobileMenuModal: React.FC<Props> = ({ navItems }) => {
 
       <Gutter>
         <div className={classes.mobileMenuItems}>
-          {navItems.map(({ link }, i) => {
+          {navItems!.map(({ link }, i) => {
             return (
               <CMSLink className={classes.menuItem} key={i} {...link} />
             )

@@ -1,8 +1,8 @@
 import React from 'react';
-import NextImage, { StaticImageData } from 'next/image';
+import NextImage, {StaticImageData} from 'next/image';
 import classes from './index.module.scss'
 import cssVariables from '../../../cssVariables';
-import { Props } from '..';
+import {Props} from '..';
 
 const { breakpoints } = cssVariables;
 
@@ -38,9 +38,7 @@ export const Image: React.FC<Props> = (props) => {
     height = fullHeight;
     alt = altFromResource;
 
-    let filename = fullFilename;
-
-    src = `${process.env.NEXT_PUBLIC_S3_ENDPOINT}/${process.env.NEXT_PUBLIC_S3_BUCKET}/${filename}`;
+    src = `${process.env.NEXT_PUBLIC_S3_ENDPOINT}/${process.env.NEXT_PUBLIC_S3_BUCKET}/${fullFilename}`;
   }
 
   // NOTE: this is used by the browser to determine which image to download at different screen sizes
